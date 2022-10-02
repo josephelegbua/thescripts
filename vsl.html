@@ -1,257 +1,961 @@
-html {
-  scroll-behavior: smooth;
-}
 
-.navbar__wrap {
-  margin-bottom: 1.25rem;
-}
+<!DOCTYPE html>
+<html lang="us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <title>The Secret Scripts</title>
+    <link rel="stylesheet" id="understrap-styles-css" href="css/theme.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="custom-css" href="css/custom.css" type="text/css" media="all">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Get The Guy - Love. Life.">
+    <!-- Start Visual Website Optimizer Code -->
+<script type='text/javascript'>
+var _vis_opt_account_id = 395872;
+var _vis_opt_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+document.write('<s' + 'cript src="' + _vis_opt_protocol + 
+'dev.visualwebsiteoptimizer.com/deploy/js_visitor_settings.php?v=1&a='+_vis_opt_account_id+'&url='
++encodeURIComponent(document.URL)+'&random='+Math.random()+'" type="text/javascript">' + '<\/s' + 'cript>');
+</script>
 
-@media screen and (min-width: 64rem) {
-  .navbar__wrap {
-    margin-bottom: unset;
-  }
-}
+<script type='text/javascript'>
+if(typeof(_vis_opt_settings_loaded) == "boolean") { document.write('<s' + 'cript src="' + _vis_opt_protocol + 
+'d5phz18u4wuww.cloudfront.net/vis_opt.js" type="text/javascript">' + '<\/s' + 'cript>'); }
+// if your site already has jQuery 1.4.2, replace vis_opt.js with vis_opt_no_jquery.js above
+</script>
 
-.hidden-for-mobile {
-  display: none;
+<script type='text/javascript'>
+if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initialize) == "function") {
+        _vis_opt_top_initialize(); vwo_$(document).ready(function() { _vis_opt_bottom_initialize(); });
 }
+</script>
+<!-- End Visual Website Optimizer Code -->
 
-@media screen and (min-width: 64rem) {
-  .hidden-for-mobile {
-    display: block;
-  }
-}
+    <!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com -->
+    <script type="text/javascript" src="https://a.omappapi.com/app/js/api.min.js" data-account="4832" data-user="9781" async></script>
+    <!-- / https://optinmonster.com -->
 
-.hidden-for-desktop {
-  position: absolute;
-  z-index: 900;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+    <script type="text/javascript">
+        var cartLink = 'https://members.howtogettheguy.com/checkout/?rid=pgGVHb';
+    </script>
+</head>
+<body class="">
+<script>
+    dataLayer = [];</script>
 
-@media screen and (min-width: 64rem) {
-  .hidden-for-desktop {
-    display: none;
-  }
-}
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-M8SBJ4" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-M8SBJ4');</script>
 
-.is-small {
-  font-size: 0.875rem;
-}
 
-.play-button-wrapper {
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  place-items: center;
-}
 
-.hero__play-button--mobile {
-  margin-top: unset;
-}
 
-#sales-page {
-  position: relative;
-  margin-top: 11.875rem;
-}
+<div class="site" id="page">
 
-@media screen and (min-width: 64rem) {
-  #sales-page {
-    margin-top: 4.5rem;
-  }
-}
+    <!-- ******************* The Navbar Area ******************* -->
+    <div id="wrapper-navbar" itemscope="" itemtype="http://schema.org/WebSite">
 
-.navigation {
-  z-index: 900;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  display: grid;
-  place-items: center;
-  background-color: black;
-  height: 14.375rem;
-}
+        <a class="skip-link sr-only sr-only-focusable" href="#content">Skip to content</a>
 
-@media screen and (min-width: 64rem) {
-  .navigation {
-    height: 4.5rem;
-    padding: unset;
-  }
-}
+        <!-- <nav class="navbar navbar-expand-md navbar-light navbar--transparent">
+            <div class="container">
+                <div class="navbar__wrap">
+                    <img src="img/logo-desktop.svg" class="d-none d-md-block" alt="Get The Guy">
+                    <img class="d-md-none" src="img/logo-mobile.svg" alt="Get The Guy">
+                    <span class="navbar__tag">Love. Life.</span>
+                </div>
+            </div>.container
+        </nav>-->
 
-.navigation__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+        <nav class="navigation">
+            <div class="container">
+                <div class="navigation__wrapper">
+                    <div class="navbar__wrap">
+                        <img src="img/mh-logo.svg" class="d-none d-md-block" alt="Get The Guy">
+                        <!-- <img class="d-md-none" src="img/mh-logo.svg" alt="Get The Guy"> -->
+                        <!-- <span class="navbar__tag">Love. Life.</span> -->
+                    </div>
+                    <div class="countdown">
+                        <p class="countdown__heading">Hurry - Your Limited-Time Offer Expires In:</p>
+                        <div class="countdown__wrapper">
+                            <div class="days__wrapper">
+                                <p class="days">000</p>
+                                <p class="days__label">Days</p>
+                            </div>
+                            <div class="hours__wrapper">
+                                <p class="hours">000</p>
+                                <p class="hours__label">Hrs</p>
+                            </div>
+                            <div class="minutes__wrapper">
+                                <p class="minutes">000</p>
+                                <p class="minutes__label">Min</p>
+                            </div>
+                            <div class="seconds__wrapper">
+                                <p class="seconds">000</p>
+                                <p class="seconds__label">Sec</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#cta" class="btn btn-primary is-small">Get My Download</a>
+                </div>
+            </div>
+        </nav>
 
-  @media screen and (min-width: 64rem) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
+    </div><!-- #wrapper-navbar end -->
 
-@media screen and (min-width: 64rem) {
-  .navigation__wrapper {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
+    <div class="wrapper" id="sales-page">
 
-.countdown {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
+        <section class="hero hero--sales">
+            <div class="container">
+                <a href="#" class="hero__play-button hidden-for-mobile" type="button" aria-label="Watch Video"></a>
+                <h2 class="hero__subtitle">Want the Perfect Thing to Say to Men to Get the Exact Result You Want?</h2>
+                <h1 class="hero__title">The World’s Top Love Life Coach is Sharing His Scripts...</h1>
+                <div class="hero__desc">Communicate with Confidence • Text Without Stress • Customizable Scripts Get You Instant Results</div>
+                
+                            </div>
+            <div class="hero__video">
+                <a href="#" class="hero__play-button--mobile hidden-for-desktop" type="button" aria-label="Watch Video"></a>
+                <div class="video-vimeo">
+                    <a class="video-vimeo__link" href="https://player.vimeo.com/video/388413457" data-url="https://player.vimeo.com/video/388413457">
+                        <picture>
+                            <img class="video__media" src="img/top-section-bg-sales.jpg" alt="vimeo video" loading="lazy">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-@media screen and (min-width: 64rem) {
-  .countdown {
-    flex-direction: row;
-    margin-bottom: unset;
-  }
-}
+        <section class="feature">
+            <div class="container">
+                <div class="hero__cta-wrapper">
+                                        <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/"
+                        method="POST" class="download form_check_hotmail">
+                                                    <div class="download__field">
+                                <label class="sr-only" for="hero-email">Email</label>
+                                <input class="download__input" id="hero-email" name="contact_fields[email]"
+                                       placeholder="Email address (optional)" type="email"/>
+                            </div>
+                                                <div class="download__submit">
+                            <button type="submit" class="btn btn-primary">Get My download</button>
+                        </div>
+                        <input type="hidden" name="utm_adgroup" value="" /><input type="hidden" name="utm_adid" value="" /><input type="hidden" name="utm_campaign" value="" /><input type="hidden" name="utm_content" value="" /><input type="hidden" name="utm_source" value="" /><input type="hidden" name="utm_medium" value="" /><input type="hidden" name="utm_term" value="" /><input type="hidden" name="gclid" value="" /><input type="hidden" name="referrer" value="" /><input type="hidden" name="exp_cookie" id="exp_cookie" value="fb72fd9c-781e-4ecd-b7bc-0d8d318187d8" /><input type="hidden" id="_wpnonce" name="_wpnonce" value="72229a16f5" />                    </form>
+                                        <p class="hero__bonus">Limited Time: Get How to Talk to Men AND 8 Free Bonuses + 1 Rare Bonus = 9 Bonuses</p>
+                    </div>
+                <div class="feature__subtitle">How many times have you <strong>panicked before sending a text to a guy</strong> you like because you were afraid he’d reject you? How many
+                    times
+                    have you
+                    <strong>felt paralyzed without the right words</strong>, worried that you’d <strong>give him the wrong impression</strong> or say something that would backfire?
+                </div>
+                <h2 class="feature__title">It’s a common problem with real-life<br>consequences...</h2>
+                <div class="row">
+                    <div class="col-md-5 col-lg-4 order-md-2 text-center text-lg-left">
+                        <strong class="feature__tag">YOU MIGHT...</strong>
+                        <ul class="feature__list">
+                            <li class="feature__item px-0 align-items-lg-start text-lg-left">
+                                <picture>
+                                    <img class="feature__icon feature__icon--sales" width="118" height="118" src="img/clock-sales.svg" alt="clock icon" loading="lazy">
+                                </picture>
+                                <div>
+                                    <h3 class="feature__item-title feature__item-title--sales">Lose hours</h3>
+                                    <span class="feature__desc">analyzing and AGONIZING over every text or email… replaying the words, wishing you’d
+																	said things differently.</span>
+                                </div>
+                            </li>
+                            <li class="feature__item px-0 align-items-lg-start text-lg-left">
+                                <picture>
+                                    <img class="feature__icon feature__icon--sales" width="118" height="118" src="img/popup-sales.svg" alt="text icon" loading="lazy">
+                                </picture>
+                                <div>
+                                    <h3 class="feature__item-title feature__item-title--sales">Avoid having hard, but essential conversations</h3>
+                                    <span class="feature__desc">because you’re worried it will backfire.</span>
+                                </div>
+                            </li>
+                            <li class="feature__item px-0 align-items-lg-start text-lg-left">
+                                <picture>
+                                    <img class="feature__icon feature__icon--sales" width="118" height="118" src="img/broken-hurt-sales.svg" alt="broken hurt icon" loading="lazy">
+                                </picture>
+                                <div>
+                                    <h3 class="feature__item-title feature__item-title--sales">Stay out of the dating world altogether</h3>
+                                    <span class="feature__desc">because it just seems too confusing and too complicated.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-7 col-lg-8">
+                        <div class="feature__image pl-lg-0">
+                            <img src="img/feature-img-sales.jpg" alt="feature image" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="feature__content">
+                    <p>This is exactly why I created <strong><i>How to Talk to Men</i></strong>. My quick-start guide includes 59 scripts you can customize in every situation – from
+                        flirting, to first dates, to
+                        texting and beyond.</p>
+                    <p>These perfectly-crafted examples go beyond theory to show you how to take quick, confident action in your love life and get incredible results with men.</p>
+                </div>
+                                    <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/" method="POST" class="download form_check_hotmail">
+                                                    <div class="download__field">
+                                <label class="sr-only" for="feature-email">Email</label>
+                                <input class="download__input" id="feature-email" name="contact_fields[email]"
+                                       placeholder="Email address (optional)" type="email"/>
+                            </div>
+                                                <div class="download__submit">
+                            <button type="submit" class="btn btn-info">Download your 59 Scripts Now</button>
+                        </div>
+                        <input type="hidden" name="utm_adgroup" value="" /><input type="hidden" name="utm_adid" value="" /><input type="hidden" name="utm_campaign" value="" /><input type="hidden" name="utm_content" value="" /><input type="hidden" name="utm_source" value="" /><input type="hidden" name="utm_medium" value="" /><input type="hidden" name="utm_term" value="" /><input type="hidden" name="gclid" value="" /><input type="hidden" name="referrer" value="" /><input type="hidden" name="exp_cookie" id="exp_cookie" value="fb72fd9c-781e-4ecd-b7bc-0d8d318187d8" /><input type="hidden" id="_wpnonce" name="_wpnonce" value="72229a16f5" />                    </form>
+                            </div>
+        </section>
 
-.countdown__wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
+        <section class="step">
+            <div class="container">
+                <h2 class="step__title step__title--sales">When It Comes to Talking About Who You Are, What You Want, and What You Need, Many Women Struggle…</h2>
+                <div class="step__text">
+                    Poor communication is to blame for 99% of problems in new and existing relationships.
+                    If we express ourselves badly, we upset people or drive them away. Or we fail to say what we honestly mean and get less than we deserve – no one wants that. And because
+                    we never learn another way of communicating, we can get stuck repeating the behaviors that are sabotaging our love lives…
+                </div>
+                <strong class="step__tag">Here’s the solution:</strong>
+                <div class="row mb-6 mb-xl-8">
+                    <div class="col-md-4">
+                        <div class="step__item step__item--sales step__item--pb">
+                            <h3 class="step__item-title step__item-title--sales">1</h3>
+                            <strong class="step__item-text">AVOID THE MOST COMMON STUMBLING BLOCKS ON YOUR PATH TO LOVE.</strong>
+                            <div class="step__desc step__desc--sales">My sample scripts cover EVERY stage of dating and relationships (even the trickiest ones). You’ll never be caught off guard
+                                without knowing
+                                what to say again.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="step__item step__item--sales step__item--pb">
+                            <h3 class="step__item-title step__item-title--sales">2</h3>
+                            <strong class="step__item-text">FIND THE PERFECT SAMPLE SCRIPT FOR EVERY SITUATION.</strong>
+                            <div class="step__desc step__desc--sales">I give you perfectly-crafted sample scripts for every text or conversation. The point is not to use them verbatim (although
+                                you could!). I
+                                teach you the principles behind WHY they work, so you can make them your own...and get the results you deserve!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="step__item step__item--sales">
+                            <h3 class="step__item-title step__item-title--sales">3</h3>
+                            <strong class="step__item-text">ENJOY ULTIMATE CONTROL AND FREEDOM IN YOUR LOVE LIFE.</strong>
+                            <div class="step__desc step__desc--sales">Because I teach you WHY the words work, not just WHAT to say, you’ll always have a “True North” on your Communication
+                                Compass; equipped to
+                                handle anything that comes at you in the future.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                    <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/"
+                          method="POST" class="download download--light download--invert form_check_hotmail">
+                                                    <div class="download__field">
+                                <label class="sr-only" for="step-email">Email</label>
+                                <input class="download__input" id="step-email" name="contact_fields[email]"
+                                       placeholder="Email address (optional)" type="email"/>
+                            </div>
+                                                <div class="download__submit">
+                            <button type="submit" class="btn btn-secondary btn--step">Get Instant Access To Your
+                                Scripts
+                            </button>
+                        </div>
+                        <input type="hidden" name="utm_adgroup" value="" /><input type="hidden" name="utm_adid" value="" /><input type="hidden" name="utm_campaign" value="" /><input type="hidden" name="utm_content" value="" /><input type="hidden" name="utm_source" value="" /><input type="hidden" name="utm_medium" value="" /><input type="hidden" name="utm_term" value="" /><input type="hidden" name="gclid" value="" /><input type="hidden" name="referrer" value="" /><input type="hidden" name="exp_cookie" id="exp_cookie" value="fb72fd9c-781e-4ecd-b7bc-0d8d318187d8" /><input type="hidden" id="_wpnonce" name="_wpnonce" value="72229a16f5" />                    </form>
+                            </div>
+        </section>
 
-.countdown__heading {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: bolder;
-  text-transform: uppercase;
-  color: #fff;
-  letter-spacing: 0.15em;
-  margin-bottom: 20px;
-  text-align: center;
-}
+        <section class="guide guide--sales">
+            <div class="container">
+                <strong class="guide__sub-title text-center d-md-none">HELLO!</strong>
+                <h2 class="guide__title d-md-none">I’m Matthew Hussey</h2>
+                <div class="row align-items-md-end">
+                    <div class="col-md-6 col-lg-5 offset-lg-1 order-md-2">
+                        <div class="guide__image">
+                            <div class="guide__image">
+                                <img src="img/PHOTO-2019-08-25-07-39-55.jpg" alt="Matthew Hussey" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <strong class="guide__sub-title d-none d-md-block">HELLO!</strong>
+                        <h2 class="guide__title d-none d-md-block text-left">I’m Matthew Hussey</h2>
+                        <div class="guide__content guide__content--sales">
+                            <p class="guide__lead">I’ve Helped Millions of Women Get the Relationships They Deserve With Practical, Proven Advice</p>
+                            <p>As the leading dating authority and confidence coach for women, I’ve helped millions of women get the love life of their dreams through my <i>New York Times</i>
+                                bestselling book, sold-out live seminars, and step-by-step online coaching and training videos. And I’ll do the same for you.</p>
+                            <p><strong>My approach is honest, authentic and practical; so that you not only get the relationship you deserve but feel <i>confident and in control of your own
+                                        happiness.</i></strong></p>
+                            <p>I’ve been featured on:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-@media screen and (min-width: 64rem) {
-  .countdown__heading {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    margin-right: 20px;
-  }
-}
+        <section class="partner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-4 col-xl-2  d-flex justify-content-center align-items-center">
+                        <div class="partner__item">
+                            <picture>
+                                <img src="img/NYT-logo.png" alt="partner" class="partner__img" loading="lazy" width="111" height="79">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-2 d-flex justify-content-center align-items-center">
+                        <div class="partner__item">
+                            <picture>
+                                <img src="img/today-logo.svg" alt="partner" class="partner__img" loading="lazy" width="167" height="26">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-2  d-flex justify-content-center align-items-center">
+                        <div class="partner__item">
+                            <picture>
+                                <img src="img/cosmopolitan-logo.svg" alt="partner" class="partner__img" loading="lazy" width="123" height="26">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-2  d-flex justify-content-center align-items-center">
+                        <div class="partner__item">
+                            <picture>
+                                <img src="img/iheartradio-logo.svg" alt="partner" class="partner__img" loading="lazy" width="143" height="40">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-2  d-flex justify-content-center align-items-center">
+                        <div class="partner__item">
+                            <picture>
+                                <img src="img/good-morning-america-logo.svg" alt="partner" class="partner__img" loading="lazy" width="112" height="60">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-2  d-flex justify-content-center align-items-center">
+                        <div class="partner__item">
+                            <picture>
+                                <img src="img/rachaelray-logo.png" alt="partner" class="partner__img" loading="lazy" width="183" height="20">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.days__wrapper,
-.hours__wrapper,
-.minutes__wrapper,
-.seconds__wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0.5rem;
-}
+        <section class="section-testimonials">
+            <div class="container">
+                <h2 class="section-testimonials__title">With the Right Words, You Can Show Him That You’re the High-Value Woman He’s Been Searching for...</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-5 mb-md-0">
+                        <div class="section-testimonials__item section-testimonials__item--left">
+                            <strong>In Less Than 2 Months, He Announced His Love & Devotion</strong>
+                            <blockquote class="section-testimonials__quote">
+                                <p>“Are you kidding me?! In less than 2 months, the man I was smitten with has announced his love and devotion to me.</p>
+                                <p>He has never been married, and now is wanting to be MY husband.</p>
+                                <p>I have been in multiple bad marriages. I was the worst communicator. I pushed every man away with my inability to clearly define what I needed. No longer an
+                                    issue.</p>
+                                <p>Your advice, videos and <i>How to Talk to Men</i> texts have transformed the way I read his texts and how I respond. I am forever grateful.”</p>
+                                <cite class="text-info">- Katie</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="section-testimonials__item section-testimonials__item--right">
+                            <strong>I Used the Script from Chapter 2 and He’s Acting SO Smitten</strong>
+                            <blockquote class="section-testimonials__quote">
+                                <p>“I received both <i>How to Talk to Men</i> and I am part of your Love.Life membership. I love them both.</p>
+                                <p>Yesterday I used the ‘I could really use your help with something’ script to ask this guy I’ve been seeing for the past three months to help me get and set up a
+                                    Christmas tree.</p>
+                                <p>I swear the rest of the day he was acting so smitten and told me he wants to spend Christmas with me.</p>
+                                <p>I’m crazy about this guy so thank you!”</p>
+                                <cite class="text-secondary">- Annette</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-@media screen and (min-width: 64rem) {
-  .days__wrapper,
-  .hours__wrapper,
-  .minutes__wrapper,
-  .seconds__wrapper {
-    margin: 0 1rem;
-  }
-}
+        <section class="section-content section-content--expand section-content--bg">
+            <div class="container">
+                <h2 class="section-content__title text-left">Because the Trial and Error Method of Dating is Costing You Precious Time and Maybe Even the Love You Deserve…</h2>
+                <p>The truth is, being successful in dating and relationships is not simply about confidence in who we are, it’s about competence in what we do. And most people (<i>women
+                        and
+                        men</i>) never learn how to communicate effectively.</p>
+                <p>There are <strong>very specific words and phrases we can say to a person to <span>increase</span> attraction</strong>. And, if we’re not careful, there are things we can
+                    accidentally say to
+                    <span>decrease</span>
+                    attraction.</p>
+                <p>If you don’t know the right words to say, you can’t communicate who you REALLY are in the most attractive, compelling way. And even more frustrating is when the man
+                    you’re interested in ends up with another woman (<i>maybe even one who isn’t as good a match</i>) because she knows this language of attraction.</p>
+                <p>You’re right. It’s <i>not</i> fair. So let’s level the playing field…</p>
+                <p>...I’ll show you <i>How to Talk to Men</i> and then YOU’LL win over other women because you’ll have BOTH: True warmth AND the ability to create and keep attraction
+                    through
+                    your language.</p>
+                <a href="#" class="btn btn--expand">(KEEP READING)</a>
+                <div class="section-content__expand section-content__expand--hidden section-content__expand--visuallyhidden">
+                    <h2 class="section-content__title text-left mt-6">You’re not alone, by the way. When it comes to talking about who you are, what you want, and what
+                        you need, many women struggle.</h2>
+                    <p>The good news? Learning to communicate in a way that shows him the High-Value Woman you are is a SIMPLE fix. And once you have these sample scripts, you’ll learn how
+                        to be vulnerable without risking rejection. You’ll learn how to be honest about your expectations without making him feel burdened. You’ll learn how to represent
+                        yourself
+                        and get the credit you deserve for being an AMAZING woman that he knows is irreplaceable.</p>
+                    <p>He’ll start responding to you in a whole new way. He’ll understand your value, see you as different from every other woman, and want to spend more time with YOU (and
+                        only you).</p>
+                </div>
+            </div>
+        </section>
 
-.days,
-.hours,
-.minutes,
-.seconds {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-  color: #fff;
-  margin-right: 10px;
-  margin-bottom: 0px;
-}
+        <section class="section-experience">
+            <div class="container">
+                <div class="section-experience__body">
+                    <div class="section-experience__text">
+                        <p class="section-experience__lead">This is 10 Years of Coaching Experience Collected into One Instant Download That You Can Read Tonight (and Use Forever)...</p>
+                        <p>Every single one of the 59 scripts is a masterclass in the art of communication and psychology so you can assert yourself in a way that makes you even more
+                            irresistible to high-quality men.</p>
+                    </div>
+                </div>
 
-@media screen and (min-width: 64rem) {
-  .days,
-  .hours,
-  .minutes,
-  .seconds {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
+                <footer>
+                    <div class="section-experience__content">
+                        <strong>Part 1: How To Create Uncontrollable Attraction</strong>
+                        <table>
+                            <tr>
+                                <td><span>How to Get Men to Approach you Every Time </span></td>
+                                <td><span>p 19</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Start Talking to a Guy (With Zero Chance of Rejection)</span></td>
+                                <td><span>p 24</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Approach a Guy Via Social Media</span></td>
+                                <td><span>p 30</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Flirt With a Guy You Just Met</span></td>
+                                <td><span>p 35</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Tell if He's Into You</span></td>
+                                <td><span>p 37</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Guarantee a Guy Swaps Numbers With You</span></td>
+                                <td><span>p 41</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Know who Should Text First</span></td>
+                                <td><span>p 46</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Get Him to Ask You Out</span></td>
+                                <td><span>p 50</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Make Fascinating First Date Conversation</span></td>
+                                <td><span>p 53</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Blow it on a Date (What NOT to Say)</span></td>
+                                <td><span>p 58</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Tease a Guy to Create Uncontrollable Desire</span></td>
+                                <td><span>p 61</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Use Touch to Drive Him Wild</span></td>
+                                <td><span>p 70</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Flirt With a Work Colleague</span></td>
+                                <td><span>p 72</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Text Him the Perfect Amount to Keep Him Wanting More</span></td>
+                                <td><span>p 78</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Charm Him With Your Texts</span></td>
+                                <td><span>p 82</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Use Fun Texts to Get Him Thinking About You Non-Stop</span></td>
+                                <td><span>p 90</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Get Him to Stop Texting and Just Call You Instead</span></td>
+                                <td><span>p 92</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Get Him to Stop Just Texting and Ask You on a Date</span></td>
+                                <td><span>p 100</span></td>
+                            </tr>
+                        </table>
+                        <strong>Part 2: How to Talk to Men... To Build a Deep Connection</strong>
+                        <table>
+                            <tr>
+                                <td><span>How to Make Yourself the Woman He Wants to Do Everything With</span></td>
+                                <td><span>p 101</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Have Great Conversations That He Doesn’t Want to End</span></td>
+                                <td><span>p 104</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Get Him to Open Up</span></td>
+                                <td><span>p 109</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Make a Man Fall in Love With Impressing You</span></td>
+                                <td><span>p 116</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Be the Woman Who Endlessly Fascinates Him</span></td>
+                                <td><span>p 121</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Make Him Feel Like a Man in 5 Simple Phrases</span></td>
+                                <td><span>p 128</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Get Him to Express His Emotions to You</span></td>
+                                <td><span>p 132</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Make Him Feel More at Home With You Than Any Other Woman</span></td>
+                                <td><span>p 139</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Make Your Man Feel Amazing With Compliments</span></td>
+                                <td><span>p 143</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Make Him Feel Needed By You (So He Won’t Ever Need Any Other Woman)</span></td>
+                                <td><span>p 151</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Make Him Melt With This Clever Bragging Technique</span></td>
+                                <td><span>p 155</span></td>
+                            </tr>
+                        </table>
+                        <strong>Part 3: How to Talk to Men... So They’ll Change Their Bad Behavior</strong>
+                        <table>
+                            <tr>
+                                <td><span>How to Respond to the Late Night Booty Call in a High Value Way</span></td>
+                                <td><span>p 161</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Respond to His “Sexting”</span></td>
+                                <td><span>p 165</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Slow Down His Sexual Advances and Make Him Even More Attracted to You in the Process</span></td>
+                                <td><span>p 170</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Respond to Last Minute Date Requests</span></td>
+                                <td><span>p 173</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Get Him to Change His Bad Behavior: 6 Powerful Techniques</span></td>
+                                <td><span>p 177</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Rekindle His Interest After He Disappears</span></td>
+                                <td><span>p 194</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Get Him to Pay Attention to You When He’s “Too Busy”</span></td>
+                                <td><span>p 196</span></td>
+                            </tr>
+                        </table>
+                        <strong>Part 4: How to Talk to Men... The Hard Questions</strong>
+                        <table>
+                            <tr>
+                                <td><span>How to Ask if He’s Single ( Without Looking Desperate )</span></td>
+                                <td><span>p 205</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Show You’ve Got Options (and Make Yourself Even More Desirable )</span></td>
+                                <td><span>p 210</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Know When (and How Much) to Open Up About Your Past</span></td>
+                                <td><span>p 216</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Answer When He Says: “How Many Men Have You Slept With?” </span></td>
+                                <td><span>p 220</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Answer The Question: “Why Are You Still Single?” </span></td>
+                                <td><span>p 227</span></td>
+                            </tr>
+                        </table>
+                        <strong>Part 5: How to Talk to Men... About Sex</strong>
+                        <table>
+                            <tr>
+                                <td><span>How to Have the Condom Conversation (Without it Being Awkward)</span></td>
+                                <td><span>p 233</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Get Him to Have Sex the Way YOU Want</span></td>
+                                <td><span>p 238</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Keep the Sexual Spark Alive (So He Doesn’t Look Anywhere Else)</span></td>
+                                <td><span>p 249</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Turn Him On Even When You’re Apart </span></td>
+                                <td><span>p 253</span></td>
+                            </tr>
+                        </table>
+                        <strong>Part 6: How to Talk to Men... In an Argument</strong>
+                        <table>
+                            <tr>
+                                <td><span>How to Approach Serious Topics With a Man Without Coming Off as Threatening </span></td>
+                                <td><span>p 257</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Express Your Frustrations to a Man</span></td>
+                                <td><span>p 260</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Communicate that You’re Unhappy With His Behavior</span></td>
+                                <td><span>p 264</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Have Arguments That Strengthen (Instead Of Ruin) Your Relationship</span></td>
+                                <td><span>p 267</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Diffuse an Argument: 7 Foolproof Techniques</span></td>
+                                <td><span>p 272</span></td>
+                            </tr>
+                        </table>
+                        <strong>Part 7: How to Talk to Men... About Commitment</strong>
+                        <table>
+                            <tr>
+                                <td><span>How to Ask if He Is Seeing Other Women</span></td>
+                                <td><span>p 281</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Answer if He Asks Whether You’re Dating Someone Else</span></td>
+                                <td><span>p 284</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Know if You Are a Couple</span></td>
+                                <td><span>p 287</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Show Him You Are in Demand: 3 Simple Techniques</span></td>
+                                <td><span>p 291</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Use Sneaky Psychology to Raise Your Value in His Eyes</span></td>
+                                <td><span>p 296</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Make Yourself His Partner, Not Just His Hookup: 5 Powerful Phrases</span></td>
+                                <td><span>p 301</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Ask Him if You Are Exclusive</span></td>
+                                <td><span>p 311</span></td>
+                            </tr>
+                        </table>
+                        <strong>Part 8: How to Talk to Men... in a Relationship</strong>
+                        <table>
+                            <tr>
+                                <td><span>How to Get on His Mom’s Good Side</span></td>
+                                <td><span>p 317</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Handle the ‘Other Women’ In His World</span></td>
+                                <td><span>p 321</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to React When He Says He “Needs Space”</span></td>
+                                <td><span>p 332</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Deal With His Bad Habits at Home</span></td>
+                                <td><span>p 338</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Know When to Say “I Love You”</span></td>
+                                <td><span>p 345</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>How to Bring Up Marriage</span></td>
+                                <td><span>p 353</span></td>
+                            </tr>
+                            <tr>
+                                <td class="pt-7"><span>Final Thoughts</span></td>
+                                <td class="pt-7"><span>p 359</span></td>
+                            </tr>
+                            <tr>
+                                <td class="pt-5"><span>Glossary</span></td>
+                                <td class="pt-5"><span>p 361</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </footer>
+            </div>
+        </section>
 
-.days__label,
-.hours__label,
-.minutes__label,
-.seconds__label {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  color: rgba(255, 255, 255, 0.75);
-  text-transform: uppercase;
-}
+        <section class="partner partner--sales">
+            <div class="container text-center">
+                <strong class="partner__title">Your Love Life Will Be a Lot Less Stressful<br>
+                    (and a LOT More Fun)<br>
+                    When You Know How to Say What You Mean…<br>
+                    and Get the Reaction You’re After…</strong>
+                <div class="partner__price">$ 47</div>
+                                    <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/"
+                          method="POST" class="download download--light form_check_hotmail">
+                                                    <div class="download__field">
+                                <label class="sr-only" for="cta-email">Email</label>
+                                <input class="download__input" id="cta-email" name="contact_fields[email]"
+                                       placeholder="Email address (optional)" type="email"/>
+                            </div>
+                                                <div class="download__submit">
+                            <button type="submit" class="btn btn-primary">Yes Matt! Teach Me How To Talk To Men!
+                            </button>
+                        </div>
+                    </form>
+                            </div>
+        </section>
 
-@media screen and (min-width: 64rem) {
-  .days__label,
-  .hours__label,
-  .minutes__label,
-  .seconds__label {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
+        <section class="section-content section-content--sales">
+            <div class="container">
+                <h2 class="section-content__title">For Less Than the Price of a Night Out, You Get…</h2>
+                <div class="row justify-content-lg-center">
+                    <div class="col-md-6">
+                        <dl class="section-content__desc-list">
+                            <dt><span>1.</span> 59 Customizable Scripts That Will
+                                Prepare You for Any Situation
+                            </dt>
+                            <dd><strong>Proven scripts that get you results</strong>, based on over a decade of coaching and research on love and the psychology of passionate relationships.</dd>
+                            <dt><span>2.</span> BONUS: Texting Magic</dt>
+                            <dd><strong>Over a dozen real-life texting-with-a-guy scenarios</strong> that teach you how to respond in a way that sets you apart from every other woman he has
+                                ever dated.
+                            </dd>
+                            <dt><span>3.</span> BONUS: 5 Compliments That Will Get Him Addicted to You</dt>
+                            <dd>The 5 most important – but rarely used – compliments any man needs to hear to get him addicted to you. In this handy guide, I’ll show you how to <strong>use male
+                                    psychology to flip his attraction switches whenever you choose</strong>.
+                            </dd>
+                            <dt><span>4.</span> BONUS: How to Know if He Is Worth Dating – In 5 Minutes</dt>
+                            <dd><strong>How to pre-screen your dates (so you can STOP wasting your time)</strong> by asking these 4 revealing questions on a 5-minute phone call. If he fails
+                                these questions,
+                                don’t date him! If he answers correctly, you know he’s a keeper. All in 5 minutes!
+                            </dd>
+                            <dt><span>5.</span> BONUS: The Most Perfect Online Dating Profile Ever</dt>
+                            <dd><strong>How to create the most perfect dating profile ever with a real world example.</strong> Line by line, I’ll show you exactly what makes this case study so
+                                compelling, so you
+                                can tweak your profile for better results.
+                            </dd>
+                            <dt><span>6.</span> BONUS: 10 Essential Texts to Men</dt>
+                            <dd>The 10 most effective texts you can send to any man – in all kinds of situations – in this handy cheat-sheet you can keep in your wallet or purse. <strong>You’ll never
+                                    be caught without something perfect to say!</strong>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-md-6">
+                        <dl>
+                            <dt><span>7.</span> BONUS: The Language of Desire</dt>
+                            <dd>The difference between love and desire and the <strong>exact “desire words” to use so your guy sees you as sexy and seductive</strong>. Use just one of these
+                                phrases tonight and
+                                you’ll be shocked at the results!
+                            </dd>
+                            <dt><span>8.</span> BONUS: Deep Dive Communication Coaching – An Exclusive Q&A Webinar With Me</dt>
+                            <dd><p>Access to an exclusive call where I answer your most burning questions about men and communication. We talk about:</p>
+                                <ul>
+                                    <li>Speed dating and how to make a great first impression</li>
+                                    <li><strong>Conversational “hacks”</strong> to deal with small talk</li>
+                                    <li>How to use the advice from <i>How to Talk to Men</i> in a <strong>long-distance relationship</strong></li>
+                                    <li>A <strong>daily ritual to rid yourself of first-date nerves</strong></li>
+                                    <li>Sample conversations (given from the live listeners of the call) to let a guy down gently without bruising his ego</li>
+                                    <li>A <strong>plan to get a guy to change his bad behaviors</strong> (giving your support, without being judgmental)</li>
+                                    <li>A pep talk from me if you ever find yourself feeling unattractive</li>
+                                </ul>
+                            </dd>
+                            <dt><span>9.</span> BONUS: My Private Confidence- Boosting File</dt>
+                            <dd>
+                                <p>I have a small but precious handful of memories, quotations, and emotional triggers that instantly inspire me to get in the right state to communicate with
+                                    absolutely anyone.</p>
+                                <p>I’ve <strong>unlocked my private diary</strong> to hand you my list of “emotional buttons” to <strong>inspire you to have unstoppable confidence</strong> in any
+                                    conversation.</p>
+                            </dd>
+                            <dt><span>10.</span> LIMITED-TIME BONUS: In Matt's Voice: How To Effortlessly Respond To 14 Tricky Dating Situations</dt>
+                            <dd>
+                                <p>Some of the most *essential* "scripted" moments from Matthew Hussey's exclusive Love.Life. webinars.</p>
+                                <p>Learn how to:</p>
+                                <ul>
+                                    <li>Regain momentum with a guy</li>
+                                    <li>Communicate desire,</li>
+                                    <li>Define boundaries</li>
+                                    <li>Avoid texting mistakes</li>
+                                    <li>Get him to open up to you ...</li>
+                                </ul>
+                                <p>These 14 clips will give you the confidence you need to handle difficult conversations in dating and beyond (with real examples of <strong>how to do it in real-time<strong>) ...</p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <strong class="section-content__guarantee">You are protected by my<br>Risk-Free Satisfaction Guarantee:<br>60 Full Days • 100% Refund • No Questions Asked</strong>
+                <div class="section-content__icons">
+                    <div class="section-content__icon">
+                        <img src="img/money-back-icon.png" alt="money back icon" loading="lazy">
+                    </div>
+                    <div class="section-content__icon">
+                        <img src="img/lock-icon.png" alt="lock icon" loading="lazy">
+                    </div>
+                    <div class="section-content__icon">
+                        <img src="img/money-back-60-icon.png" alt="money back 60 icon" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.hero__play-button,
-.hero__play-button--mobile {
-  margin-top: auto;
-  width: 8.125vw;
-  height: 8.125vw;
-  background-image: url("../img/red_play_button.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
+        <section class="section-content section-content--bg section-content--faq">
+            <div class="container">
+                <h2 class="section-content__title text-left">FAQ</h2>
+                <dl class="section-content__desc-list section-content__desc-list--faq">
+                    <dt>Will I sound robotic?</dt>
+                    <dd>Not even a little. You can think of them more like guidelines if you’d rather. And because the scripts are simple, short, and teach you the psychology behind the
+                        words...it’s really easy for you to use them in a way that sounds natural.
+                    </dd>
+                    <dt>What if I run out of sample scripts?</dt>
+                    <dd>You won’t, and here’s why... the scripts tackle almost every tricky situation that there is in dating and relationships. But what’s more… they teach you the principles
+                        behind how to speak in a way that establishes your value and helps him see your point of view. As a result, you’ll be able to get these same results in the future (no
+                        matter the situation) because you understand the underlying psychology. So in that way, you won’t “run out of scripts” because you’ll already have installed the skill.
+                    </dd>
+                    <dt>What if I’m already in a relationship?</dt>
+                    <dd>If you’re already in a relationship, you’ll learn the words to inspire your boyfriend or husband to step up as an adoring partner, even if he was previously clueless
+                        or hopelessly unromantic.
+                    </dd>
+                    <dt>When will I receive my How to Talk to Men program?</dt>
+                    <dd>Immediately! You’ll get instant access to the entire program, including all of “The Secret Scripts” and your bonuses. Just enter your payment information on the
+                        following secure page and then I’ll take you to your private members-only page where you’ll have full access to your ebook download and bonus videos.
+                    </dd>
+                    <dt>Is my credit card information secure?</dt>
+                    <dd>Your order is absolutely secure. I’ve carefully selected leading 128-bit Encrypted SSL technology to protect all your payment information. All you have to do is click
+                        the button below and you’ll be taken to the secure order form.
+                    </dd>
+                    <dt>How fast will I see results?</dt>
+                    <dd>Immediately! That’s what makes <i>How to Talk to Men</i> unlike any other program of its kind – you don’t need to read it cover to cover or even in order – you can
+                        flip
+                        straight to the section that has the answer you need RIGHT NOW, customize the script, and see INSTANT results.
+                    </dd>
+                    <dt>What if it doesn’t work for me?</dt>
+                    <dd>I am so confident that <i>How to Talk to Men</i> will work for you because it has gotten results for so many women I’ve coached throughout the years. But if it
+                        doesn’t work
+                        for you for any reason, you don’t pay. Just send an email to Courtney, my head of customer support, at <a class="email"
+                                                                                                                                  href="mailto:support@howtogettheguy.com"><strong>support@howtogettheguy.com</strong></a>
+                        within 60 days of your purchase and
+                        we’ll quickly give you a 100% refund. No questions and no hassle.
+                    </dd>
+                    <dt>What if I have questions about my order?</dt>
+                    <dd>I’ve assigned Courtney personally to take care of members of this program so if you need anything at all just contact her at <a class="email"
+                                                                                                                                                        href="mailto:support@howtogettheguy.com"><strong>support@howtogettheguy.com</strong></a>
+                        and she’ll
+                        help you right away. But I promise if you can use Facebook or email you’ll have no problems using this program!
+                    </dd>
+                    <dt>Matthew, what if I have specific questions for you about my love life, or want even more coaching from you to communicate with confidence?</dt>
+                    <dd>I’ve got the perfect solution for you! With my <i>Love.Life VIP coaching program</i>, you’ll gain the competence and confidence to communicate with men even
+                        FASTER.
+                        Each month, I host a LIVE webinar each month for my <i>Love.Life</i> community where I teach my most powerful love life strategies, share my latest
+                        insights,
+                        and host a LIVE Q+A session to give real-time coaching on questions submitted by my members. And I’m inviting YOU to try it, free of charge, for 14 days. All you have
+                        to do is select “YES! I want Free Access” on your secure order form. I hope to see you on our next live coaching webinar!
+                    </dd>
+                </dl>
+                                    <div id="cta" class="cta__wrapper">
+                        <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/"
+                            method="POST" class="download form_check_hotmail">
+                                                            <div class="download__field">
+                                    <label class="sr-only" for="content-email">Email</label>
+                                    <input class="download__input" id="content-email" name="contact_fields[email]"
+                                           placeholder="Email address (optional)" type="email"/>
+                                </div>
+                                                        <div class="download__submit">
+                                <button type="submit" class="btn btn-primary">Get my download</button>
+                            </div>
+                            <input type="hidden" name="utm_adgroup" value="" /><input type="hidden" name="utm_adid" value="" /><input type="hidden" name="utm_campaign" value="" /><input type="hidden" name="utm_content" value="" /><input type="hidden" name="utm_source" value="" /><input type="hidden" name="utm_medium" value="" /><input type="hidden" name="utm_term" value="" /><input type="hidden" name="gclid" value="" /><input type="hidden" name="referrer" value="" /><input type="hidden" name="exp_cookie" id="exp_cookie" value="fb72fd9c-781e-4ecd-b7bc-0d8d318187d8" /><input type="hidden" id="_wpnonce" name="_wpnonce" value="72229a16f5" />                        </form>
+                        <p class="cta__copy"><strong>ACT NOW - </strong> <em>How to Talk to Men</em> + Your Limited-Time Video Training Bonus <strong>Expires</strong> Oct 23rd at Midnight PT!</p>
+                        <p>Click the button above to get instant access.</p>
+                    </div>
+                            </div>
+        </section>
 
-.hero__bonus {
-  font-size: 1rem;
-  line-height: 1.625;
-  color: #04273c;
-  font-weight: bolder;
-  text-align: center;
-  margin-top: 40px;
-}
+    </div>
 
-.hero__cta-wrapper,
-.cta__wrapper {
-  border: 2px dashed #ff3247;
-  padding: 20px;
-  text-align: center;
-}
 
-.hero__cta-wrapper {
-  margin-bottom: 60px;
-  color: #04273c;
-}
+    <div class="wrapper" id="wrapper-footer">
 
-.cta__wrapper {
-  margin-top: 40px;
-}
+        <footer class="footer footer--simple footer--sales" id="colophon">
+            <p style="text-align: center; color: #949292;">Copyright &copy; 2022 320 Media LLC - All Rights Reserved. <a
+                    style="color:#949292; text-decoration:none;"
+                    href="https://www.howtogettheguy.com/terms-and-conditions/" target="_blank">Refund Policy</a>.
+                <a style="color:#949292; text-decoration:none;" href="https://www.howtogettheguy.com/privacy-policy/"
+                   target="_blank">Privacy Policy</a>.</p>
+        </footer>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/custom.js"></script>
+<script src="js/theme.js" async></script>
+<script>
+    const countdown = document.querySelectorAll('.countdown');
+    const retreatDate = new Date("October 24, 2021 6:00:00 EDT").getTime();
 
-.cta__copy {
-  margin-top: 20px;
-}
+    const timer = () => {
+        const now = new Date().getTime();
+        let diff = retreatDate - now;
 
-.hero__subtitle {
-  margin-top: unset;
-}
+        if(diff < 0) {
+            countdown.remove();
+        }
 
-.red {
-  font-weight: 700;
-  color: #ff3247;
-}
+        let days = Math.floor(diff / (1000*60*60*24));
+        let hours = Math.floor(diff % (1000*60*60*24) / (1000*60*60));
+        let minutes = Math.floor(diff % (1000*60*60) / (1000*60));
+        let seconds = Math.floor(diff % (1000*60) / 1000);
+
+        days <= 9 ? days = `0${days}` : days;
+        hours <= 9 ? hours = `0${hours}` : hours;
+        minutes <= 9 ? minutes = `0${minutes}` : minutes;
+        seconds <= 9 ? seconds = `0${seconds}` : seconds;
+
+        document.querySelectorAll('.days').forEach((day, index) => {
+            day.textContent = days;
+        });
+        document.querySelectorAll('.hours').forEach((hour, index) => {
+            hour.textContent = hours;
+        });
+        document.querySelectorAll('.minutes').forEach((minute, index) => {
+            minute.textContent = minutes;
+        });
+        document.querySelectorAll('.seconds').forEach((second, index) => {
+            second.textContent = seconds;
+        });
+
+    }
+
+    timer();
+    setInterval(timer, 1000);
+</script>
+</body>
+</html>
