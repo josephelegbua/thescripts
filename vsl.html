@@ -1,0 +1,257 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar__wrap {
+  margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 64rem) {
+  .navbar__wrap {
+    margin-bottom: unset;
+  }
+}
+
+.hidden-for-mobile {
+  display: none;
+}
+
+@media screen and (min-width: 64rem) {
+  .hidden-for-mobile {
+    display: block;
+  }
+}
+
+.hidden-for-desktop {
+  position: absolute;
+  z-index: 900;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 64rem) {
+  .hidden-for-desktop {
+    display: none;
+  }
+}
+
+.is-small {
+  font-size: 0.875rem;
+}
+
+.play-button-wrapper {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.hero__play-button--mobile {
+  margin-top: unset;
+}
+
+#sales-page {
+  position: relative;
+  margin-top: 11.875rem;
+}
+
+@media screen and (min-width: 64rem) {
+  #sales-page {
+    margin-top: 4.5rem;
+  }
+}
+
+.navigation {
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background-color: black;
+  height: 14.375rem;
+}
+
+@media screen and (min-width: 64rem) {
+  .navigation {
+    height: 4.5rem;
+    padding: unset;
+  }
+}
+
+.navigation__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 64rem) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .navigation__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 64rem) {
+  .countdown {
+    flex-direction: row;
+    margin-bottom: unset;
+  }
+}
+
+.countdown__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown__heading {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.15em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 64rem) {
+  .countdown__heading {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-right: 20px;
+  }
+}
+
+.days__wrapper,
+.hours__wrapper,
+.minutes__wrapper,
+.seconds__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+
+@media screen and (min-width: 64rem) {
+  .days__wrapper,
+  .hours__wrapper,
+  .minutes__wrapper,
+  .seconds__wrapper {
+    margin: 0 1rem;
+  }
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 64rem) {
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.days__label,
+.hours__label,
+.minutes__label,
+.seconds__label {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 64rem) {
+  .days__label,
+  .hours__label,
+  .minutes__label,
+  .seconds__label {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.hero__play-button,
+.hero__play-button--mobile {
+  margin-top: auto;
+  width: 8.125vw;
+  height: 8.125vw;
+  background-image: url("../img/red_play_button.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero__bonus {
+  font-size: 1rem;
+  line-height: 1.625;
+  color: #04273c;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.hero__cta-wrapper,
+.cta__wrapper {
+  border: 2px dashed #ff3247;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero__cta-wrapper {
+  margin-bottom: 60px;
+  color: #04273c;
+}
+
+.cta__wrapper {
+  margin-top: 40px;
+}
+
+.cta__copy {
+  margin-top: 20px;
+}
+
+.hero__subtitle {
+  margin-top: unset;
+}
+
+.red {
+  font-weight: 700;
+  color: #ff3247;
+}
