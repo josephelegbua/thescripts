@@ -219,7 +219,7 @@ html {
 }
 
 .hero__bonus {
-  font-size: 1rem;
+  font-size: 1.35rem;
   line-height: 1.625;
   color: #04273c;
   font-weight: bolder;
@@ -254,4 +254,152 @@ html {
 .red {
   font-weight: 700;
   color: #ff3247;
+}
+
+
+/* JOSEPHS ADDED STYLES */
+
+/* FEATURE SECTION */
+/* styles for feature section new items */
+
+
+ul.form-list span{
+  font-weight:800;
+}
+
+ul.form-list{
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-top: 0.5%;
+}
+
+li.list-item-1{
+  margin-top: 3%;
+}
+
+li.list-item-2{
+  margin-top: 3%;
+}
+
+li.list-item-3{
+  margin-top: 3%;
+}
+
+/* 2560 SCREEN */
+
+@media(width:2560px){
+
+  ul.form-list li{
+    font-size: 1.5rem!important;
+  }
+
+  ul.form-list{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 0.5%;
+  }
+
+  .hero__bonus {
+    font-size: 2rem !important;
+  }
+
+}
+
+/* 1920 SCREEN */
+
+@media(width:1920px){
+
+  ul.form-list li{
+    font-size: 1.5rem!important;
+  }
+
+  ul.form-list{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 0.5%;
+  }
+
+  .hero__bonus {
+    font-size: 2rem !important;
+  }
+
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media(max-width:767px){
+
+  ul.form-list{
+    margin-right: 0% !important;
+    margin-left: -8% !important;
+    margin-top: 0.5%;
+  }
+
+  ul.form-list li{
+    font-size: 1.2rem!important;
+  }
+
+  li.list-item-1{
+    margin-top: 8% !important;
+  }
+
+  li.list-item-2{
+    margin-top: 8% !important;
+  }
+
+  li.list-item-3{
+    margin-top: 8% !important;
+  }
+}
+
+
+/* NEW TESTIMONIALS BACKUP SECTION */
+/* styles for new testimonials section new items */
+
+.hero__bonus2 {
+  font-size: 1.2rem;
+  line-height: 1.625;
+  color: #04273c;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 40px;
+}
+
+section#testimonials-backup{
+  margin-top: -9% !important;
+}
+
+
+/* STEP SECTION */
+/* styles for new testimonials section new items */
+
+.hero__bonus3 {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #fff;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 20px;
+  font-weight:500;
+}
+
+span.highlight-underline{
+  text-decoration: underline;
+  -webkit-text-decoration-color: #ff3247;
+  -moz-text-decoration-color: #ff3247;
+  text-decoration-color: #ff3247;
+  font-weight: 400;
+}
+
+.hero__bonus5 {
+  font-size: 1.3rem !important;
+  line-height: 1.5;
+  color: #04273c;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: -2.5% !important;
+  margin-bottom: 5% !important;
+  font-weight:500 !important;
+  text-align: center;
 }
