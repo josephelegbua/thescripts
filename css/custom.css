@@ -74,7 +74,7 @@ html {
   left: 0;
   display: grid;
   place-items: center;
-  background-color: black;
+  background-color: #306471;
   height: 14.375rem;
 }
 
@@ -262,12 +262,14 @@ html {
 /* HEADER/NAV */
 
 .navigation .btn-primary{
-  background: #306471;
-  border: #306471;
+  background: #ff3247;
+  border: #ff3247;
 }
 
 .navigation .btn-primary:hover{
-  background: #ff3247;
+  background: #fff;
+  border: 2px solid #ff3247;
+  color:#ff3247;
   border-radius: 0;
 }
 
@@ -341,9 +343,13 @@ html {
 /* FEATURE SECTION */
 /* styles for feature section new items */
 
+ul.form-list{
+text-align: left;
+}
 
 ul.form-list span{
   font-weight:800;
+  font-size:1.21rem;
 }
 
 ul.form-list{
@@ -353,17 +359,17 @@ ul.form-list{
 }
 
 li.list-item-1{
-  margin-top: 3%;
+  margin-top: 5%;
   line-height: 1.75;
 }
 
 li.list-item-2{
-  margin-top: 3%;
+  margin-top: 5%;
   line-height: 1.75;
 }
 
 li.list-item-3{
-  margin-top: 3%;
+  margin-top: 5%;
   line-height: 1.75;
 }
 
@@ -373,7 +379,7 @@ li.list-item-3{
 }
 
 .feature .btn-primary:hover{
-  color:#04273c;
+  color: #ff3247;
   background: rgb(242, 242, 242);
   border: 2px #f54b5d solid;
 }
@@ -384,9 +390,9 @@ li.list-item-3{
 }
 
 .feature .btn-info:hover{
-  color:#04273c;
-  background: rgb(242, 242, 242);
-  border: 2px rgb(88, 188, 196) solid;
+  border: 2px #58bcc4 solid;
+  color:#58bcc4;
+  background: #fff;
 }
 
 /* 2560 SCREEN */
@@ -395,6 +401,15 @@ li.list-item-3{
 
   ul.form-list li{
     font-size: 1.5rem!important;
+  }
+
+  ul.form-list p{
+    font-size: 1.5rem!important;
+    line-height: 1.5;
+  }
+
+  ul.form-list span{
+    font-size: 1.8rem!important;
   }
 
   ul.form-list{
@@ -483,8 +498,16 @@ section#testimonials-backup{
 }
 
 section#testimonials-backup2{
-  margin-top: -8% !important;
+  margin-top: -5% !important;
   background-color: #58bcc4;
+}
+
+section#testimonials-backup2 .section-testimonials__item--left{
+  padding-bottom: 0;
+}
+
+section#testimonials-backup2 .section-testimonials__item--right{
+  padding-bottom: 0;
 }
 
 /* 2560 SCREENS */
@@ -550,6 +573,13 @@ span.highlight-underline{
   margin-right: -5%;
 }
 
+.step .btn--step:hover{
+  background: #fff;
+  border: 2px solid rgb(4, 39, 60);
+  color:rgb(4, 39, 60);
+  border-radius: 0;
+}
+
 /* MOBILE RESPONSIVENESS */
 
 @media(max-width:767px){
@@ -571,9 +601,10 @@ span.highlight-underline{
 }
 
 .partner--sales .btn:hover{
-  background: transparent ;
-  border: 2px solid #f54b5d;
-  color:#fff;
+  background: #fff;
+  border: 2px solid #ff3247;
+  color:#ff3247;
+  border-radius: 0;
 }
 
 span.sale-font{
@@ -583,4 +614,33 @@ span.sale-font{
 
 ul.bonus-align{
   margin-left: -4.5%;
+}
+
+
+/* SALES SECTION */
+/* styles for saltes */
+
+.inline-bonus-list{
+  margin-left: 2.5%;
+}
+
+@media(max-width:767px){
+  .inline-bonus-list{
+    margin-left: 5%;
+  }
+}
+
+
+/* FAQ SECTION */
+/* styles for faq */
+
+.section-content--faq .btn:hover{
+  background: #fff;
+  border: 2px solid #ff3247;
+  color:#ff3247;
+  border-radius: 0;
+}
+
+.hero--sales .btn-outline-light:focus svg, .hero--sales .btn-outline-light:hover svg {
+  stroke: #fff;
 }
