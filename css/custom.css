@@ -259,6 +259,74 @@ html {
 
 /* JOSEPHS ADDED STYLES */
 
+/* HEADER/NAV */
+
+.navigation .btn-primary{
+  background: #306471;
+  border: #306471;
+}
+
+.navigation .btn-primary:hover{
+  background: #ff3247;
+  border-radius: 0;
+}
+
+.navigation{
+  padding-top: 25px;
+  padding-bottom: 70px;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  font-size: 1.05rem;
+}
+
+.countdown__heading {
+  font-size:1.05rem;
+  margin-top: 0.3%;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media(max-width:767px){
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  font-size: 1.15rem;
+}
+
+.countdown__wrapper{
+  margin-top: 25px;
+}
+
+.navigation{
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.countdown__heading{
+  line-height: 1.6;
+}
+
+}
+
+/* HERO SECTION */
+/* styles for hero section */
+
+.hero--sales .btn--hero-sales:hover{
+  background: #f54b5d;
+  border: none !important;
+  border-radius: 0;
+}
+
+.hero__cta-wrapper{
+  border: 5px dashed #ff3247;
+}
+
 /* FEATURE SECTION */
 /* styles for feature section new items */
 
@@ -275,14 +343,39 @@ ul.form-list{
 
 li.list-item-1{
   margin-top: 3%;
+  line-height: 1.75;
 }
 
 li.list-item-2{
   margin-top: 3%;
+  line-height: 1.75;
 }
 
 li.list-item-3{
   margin-top: 3%;
+  line-height: 1.75;
+}
+
+.feature .btn-primary{
+  font-size: 1rem;
+  padding: 15px 28px
+}
+
+.feature .btn-primary:hover{
+  color:#04273c;
+  background: rgb(242, 242, 242);
+  border: 2px #f54b5d solid;
+}
+
+.feature .btn-info{
+  font-size: 1rem;
+  padding: 15px 28px
+}
+
+.feature .btn-info:hover{
+  color:#04273c;
+  background: rgb(242, 242, 242);
+  border: 2px rgb(88, 188, 196) solid;
 }
 
 /* 2560 SCREEN */
@@ -358,8 +451,8 @@ li.list-item-3{
 /* styles for new testimonials section new items */
 
 .hero__bonus2 {
-  font-size: 1.2rem;
-  line-height: 1.625;
+  font-size: 1.5rem;
+  line-height: 1.5;
   color: #04273c;
   font-weight: bolder;
   text-align: center;
@@ -370,12 +463,31 @@ section#testimonials-backup{
   margin-top: -9% !important;
 }
 
+section#testimonials-backup2{
+  margin-top: -8% !important;
+  background-color: #58bcc4;
+}
+
+/* 2560 SCREENS */
+
+@media(width:2560px){
+
+  section#testimonials-backup{
+    margin-top: -5% !important;
+  }
+
+  section#testimonials-backup2{
+    margin-top: -4.5% !important;
+  }
+
+}
+
 
 /* STEP SECTION */
 /* styles for new testimonials section new items */
 
 .hero__bonus3 {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.5;
   color: #fff;
   font-weight: bolder;
@@ -402,4 +514,38 @@ span.highlight-underline{
   margin-bottom: 5% !important;
   font-weight:500 !important;
   text-align: center;
+}
+
+.step .btn--step{
+  font-size: 1rem;
+  padding: 15px 28px;
+  margin-left:-5%;
+  margin-right: -5%;
+}
+
+
+/* PARTNER SECTION */
+/* styles for partner section */
+
+.partner--sales .btn{
+  font-size: 1rem;
+  padding: 15px 35px;
+  margin-left: 5%;
+  margin-right: 5%;
+  line-height: 1.35;
+}
+
+.partner--sales .btn:hover{
+  background: transparent ;
+  border: 2px solid #f54b5d;
+  color:#fff;
+}
+
+span.sale-font{
+  font-weight:800;
+  font: size 1.45rem;
+}
+
+ul.bonus-align{
+  margin-left: -4.5%;
 }
