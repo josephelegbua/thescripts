@@ -664,3 +664,9 @@ ul.bonus-align{
   width: 65%;
   margin-bottom: 5%;
 }
+
+@media(max-width:767px){
+  .hero__cta-wrapper{
+    width: 100%;
+  }
+}
