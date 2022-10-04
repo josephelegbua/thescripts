@@ -261,6 +261,10 @@ html {
 
 /* HEADER/NAV */
 
+.d-md-block{
+  width: 125px;
+}
+
 .navigation .btn-primary{
   background: #ff3247;
   border: #ff3247;
@@ -271,6 +275,7 @@ html {
   border: 2px solid #ff3247;
   color:#ff3247;
   border-radius: 0;
+  font-size:0.875rem;
 }
 
 .navigation{
@@ -460,15 +465,15 @@ li.list-item-3{
   }
 
   li.list-item-1{
-    margin-top: 12% !important;
+    margin-top: 8% !important;
   }
 
   li.list-item-2{
-    margin-top: 12% !important;
+    margin-top: 8% !important;
   }
 
   li.list-item-3{
-    margin-top: 12% !important;
+    margin-top: 8% !important;
   }
 
   .hero__bonus {
@@ -480,7 +485,7 @@ li.list-item-3{
   }
 
   ul.form-list p{
-    margin-top: 4%;
+    margin-top: 2%;
     line-height: 1.6;
   }
 
@@ -652,4 +657,10 @@ ul.bonus-align{
 
 .hero--sales .btn-outline-light:focus svg, .hero--sales .btn-outline-light:hover svg {
   stroke: #fff;
+}
+
+.hero__cta-wrapper{
+  margin:0 auto;
+  width: 65%;
+  margin-bottom: 5%;
 }
