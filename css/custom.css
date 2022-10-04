@@ -309,6 +309,7 @@ html {
 }
 
 .countdown__heading{
+  font-size:0.95rem;
   line-height: 1.6;
 }
 
@@ -325,6 +326,16 @@ html {
 
 .hero__cta-wrapper{
   border: 5px dashed #ff3247;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media(max-width:767px){
+
+  .hero__cta-wrapper{
+    border: 3px dashed #ff3247;
+  }
+
 }
 
 /* FEATURE SECTION */
@@ -430,7 +441,7 @@ li.list-item-3{
   }
 
   ul.form-list li{
-    font-size: 1.2rem!important;
+    font-size: 1.05rem!important;
   }
 
   li.list-item-1{
@@ -443,6 +454,14 @@ li.list-item-3{
 
   li.list-item-3{
     margin-top: 8% !important;
+  }
+
+  .hero__bonus {
+    font-size: 1.3  rem;
+  }
+
+  .feature .btn-info{
+    line-height:1.3;
   }
 }
 
@@ -480,6 +499,14 @@ section#testimonials-backup2{
     margin-top: -4.5% !important;
   }
 
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media(max-width:767px){
+  .hero__bonus2 {
+    font-size: 1.3rem;
+  }
 }
 
 
@@ -521,6 +548,14 @@ span.highlight-underline{
   padding: 15px 28px;
   margin-left:-5%;
   margin-right: -5%;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media(max-width:767px){
+  .step .btn--step{
+    line-height:1.3;
+  }
 }
 
 
