@@ -229,7 +229,7 @@ html {
 
 .hero__cta-wrapper,
 .cta__wrapper {
-  border: 2px dashed #ff3247;
+  border: 4px dashed #ff3247;
   padding: 20px;
   text-align: center;
 }
@@ -324,10 +324,6 @@ html {
   border-radius: 0;
 }
 
-.hero__cta-wrapper{
-  border: 5px dashed #ff3247;
-}
-
 /* MOBILE RESPONSIVENESS */
 
 @media(max-width:767px){
@@ -351,8 +347,8 @@ ul.form-list span{
 }
 
 ul.form-list{
-  margin-right: 20%;
-  margin-left: 20%;
+  margin-right: 5%;
+  margin-left: 5%;
   margin-top: 0.5%;
 }
 
