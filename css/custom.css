@@ -265,22 +265,15 @@ html {
   width: 125px;
 }
 
-.navigation .btn-primary{
-  background: #ff3247;
-  border: #ff3247;
+.navigation{
+  padding-top: 25px;
+  padding-bottom: 70px;
 }
 
 .navigation .btn-primary:hover{
   background: #fff;
   border: 2px solid #ff3247;
-  color:#ff3247;
-  border-radius: 0;
-  font-size:0.875rem;
-}
-
-.navigation{
-  padding-top: 25px;
-  padding-bottom: 70px;
+  color: #ff3247;
 }
 
 .days,
