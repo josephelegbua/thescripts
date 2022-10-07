@@ -793,7 +793,7 @@ span.color{
 @media(max-width:767px){
 
   section#testimonials-backup-bonus img{
-    width: 100%;
+    width: 60%;
   }
   
   section#testimonials-backup-bonus .section-testimonials__item--left{
@@ -816,11 +816,11 @@ span.color{
   }
   
   section#testimonials-backup img{
-    width: 80%;
+    width: 60%;
   }
   
-  section#testimonials-backup img{
-    width: 80%;
+  section#testimonials-backup2 img{
+    width: 60%;
   }
   
   h1.inline-list-limited{
