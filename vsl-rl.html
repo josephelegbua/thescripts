@@ -1,28 +1,4 @@
-<?php
-require_once '../../site/wp-load.php';
-require_once '../../common/gtgmember/index.php';
-
-$timezone = "America/New_York";
-$current_date = new \DateTime("now", new DateTimeZone($timezone));
-$redirect_rl_evergreen = '2022-10-22 03:00:00';
-
-if ($current_date->format('Y-m-d H:i:s') > $redirect_rl_evergreen && !isset($_GET['soldout'])) {
-    header('Location: https://www.howtogettheguy.com/thescripts/vsl/');
-    exit();
-}
-
-$cart_link = 'https://members.howtogettheguy.com/checkout/?rid=pgGVHb';
-$token = filter_input(INPUT_GET, 'token');
-
-if ($token) {
-    $cart_link = add_query_arg(['token' => $token, 'confirmpurchase' => 1, 'recommended' => 1], $cart_link);
-}
-
-$contact_id = filter_input(INPUT_GET, 'id');
-
-if (isset($contact_id) && function_exists('get_contact_information')) {
-    $contact_information = get_contact_information($contact_id);
-} ?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="us">
 <head>
     <meta charset="UTF-8">
