@@ -1,5 +1,28 @@
+<?php
+require_once '../../site/wp-load.php';
+require_once '../../common/gtgmember/index.php';
 
-<!DOCTYPE html>
+$timezone = "America/New_York";
+$current_date = new \DateTime("now", new DateTimeZone($timezone));
+$redirect_rl_evergreen = '2022-10-22 03:00:00';
+
+if ($current_date->format('Y-m-d H:i:s') > $redirect_rl_evergreen && !isset($_GET['soldout'])) {
+    header('Location: https://www.howtogettheguy.com/thescripts/vsl/');
+    exit();
+}
+
+$cart_link = 'https://members.howtogettheguy.com/checkout/?rid=pgGVHb';
+$token = filter_input(INPUT_GET, 'token');
+
+if ($token) {
+    $cart_link = add_query_arg(['token' => $token, 'confirmpurchase' => 1, 'recommended' => 1], $cart_link);
+}
+
+$contact_id = filter_input(INPUT_GET, 'id');
+
+if (isset($contact_id) && function_exists('get_contact_information')) {
+    $contact_information = get_contact_information($contact_id);
+} ?><!DOCTYPE html>
 <html lang="us">
 <head>
     <meta charset="UTF-8">
@@ -157,32 +180,12 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                         </div>
                         <input type="hidden" name="utm_adgroup" value="" /><input type="hidden" name="utm_adid" value="" /><input type="hidden" name="utm_campaign" value="" /><input type="hidden" name="utm_content" value="" /><input type="hidden" name="utm_source" value="" /><input type="hidden" name="utm_medium" value="" /><input type="hidden" name="utm_term" value="" /><input type="hidden" name="gclid" value="" /><input type="hidden" name="referrer" value="" /><input type="hidden" name="exp_cookie" id="exp_cookie" value="" /><input type="hidden" id="_wpnonce" name="_wpnonce" value="e03bd659a2" />                    </form>
                                         <p class="hero__bonus">Including, for a limited time, 10 amazing bonuses:</p>
+                                        <ul class="form-list">
+                                            <li class="list-item-1"><span class="why-under">LIMITED TIME: Real-Life Texts From Guys and Your Perfect Response, Every Time</span> <p>Webinar walking through 7 different text exchanges and analyzing the responses.</p></li>
+                                            <li class="list-item-2"><span class="why-under">7 Magic Messages That Get Any Guy to Respond to Your Charms</span> <p>The best kind of first texts to send when you meet a new guy to inflame curiosity and stoke desire.</p></li>
+                                            <li class="list-item-3"><span class="why-under-no">PLUS 8 more amazing bonuses . . .</span></li>
+                                        </ul>
                     
-        <section class="section-testimonials" id="testimonials-backup-bonus">
-            <div class="container"> 
-                <div class="row">
-                    <div class="col-md-6 mb-5 mb-md-0">
-                        <div class="section-testimonials__item section-testimonials__item--left">
-                            <p><img src="https://www.howtogettheguy.com/site/wp-content/uploads/2022/10/bonus-tag.png"></p>
-                            <h1 class="bonus-highlight"><li>LIMITED TIME: <span class="highlight-underline-bonus">Real-Life Texts From Guys and Your Perfect Response, Every Time</span></li></h1>
-                            <blockquote class="section-testimonials__quote">
-                                <p class="bonus-sub">Webinar walking through 7 different text exchanges and analyzing the responses.</p>
-                            </blockquote>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="section-testimonials__item section-testimonials__item--right">
-                            <p><img src="https://www.howtogettheguy.com/site/wp-content/uploads/2022/10/bonus-tag.png"></p>
-                            <h1 class="bonus-highlight"><li><span class="highlight-underline-bonus">7 Magic Messages That Get Any Guy to Respond to Your Charms</span></li></h1>
-                            <blockquote class="section-testimonials__quote">
-                                <p class="bonus-sub">The best kind of first texts to send when you meet a new guy to inflame curiosity and stoke desire.</p>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p><li class="bonus-end">PLUS 8 more amazing bonuses . . .</li></p>
-        </section>
                 </div>
                 <div class="feature__subtitle">How many times have you <strong>panicked before sending a text to a guy</strong> you like because you were afraid he’d reject you? How many
                     times
@@ -257,7 +260,7 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                 <div class="row">
                     <div class="col-md-6 mb-5 mb-md-0">
                         <div class="section-testimonials__item section-testimonials__item--left">
-                            <p><img src="https://www.howtogettheguy.com/site/wp-content/uploads/2022/10/bonus-tag.png"></p>
+                            <p><img src="https://www.howtogettheguy.com/site/wp-content/uploads/2022/10/httm-bonus.png"></p>
                             <h1 class="bonus-highlight-2">Real-Life Texts From Guys and Your Perfect Response, Every Time</h1>
                             <blockquote class="section-testimonials__quote">
                                 <p class="bonus-sub-2">In this 80 minute webinar, I walk through 7 different text exchanges.</p>
@@ -268,7 +271,7 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                     </div>
                     <div class="col-md-6">
                         <div class="section-testimonials__item section-testimonials__item--right">
-                            <p><img src="https://www.howtogettheguy.com/site/wp-content/uploads/2022/10/bonus-tag.png"></p>
+                            <p><img src="https://www.howtogettheguy.com/site/wp-content/uploads/2022/10/httm-bonus.png"></p>
                             <h1 class="bonus-highlight-2">7 Magic Messages That Get Any Guy to Respond to Your Charms</h1>
                             <blockquote class="section-testimonials__quote">
                                 <p class="bonus-sub-2">A clear breakdown of the best kind of first text to send when you meet a new guy to inflame curiosity, stoke desire, and have guys checking their phone every 5 minutes to see when you’re going to text them next.</p>
@@ -478,14 +481,6 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                     <p>He’ll start responding to you in a whole new way. He’ll understand your value, see you as different from every other woman, and want to spend more time with YOU (and
                         only you).</p>
                 </div>
-            </div>
-        </section>
-
-        <section class="section-testimonials ">
-            <div class="container">
-                <h2 class="section-testimonials__title">You’re not alone, by the way. When it comes to talking about who you are, what you want, and what you need, <span class="highlight-underline">many women struggle.</span></h2>
-                <p>The good news? Learning to communicate that in a way that shows him the high value Woman you are is a SIMPLE fix. And once you have these sample scripts, you'll learn how to be vulnerable without risking rejections. You'll learn how to be honest about your exoectations without making him feel burdened. You'll learn how to represent yourself and get the credit you deserve for being AMAZING woman that he knows is irreplaceable.</p>
-                <p>He’ll start responding to you in a whole new way. He’ll understand your value see you as different from every other woman, and want to spend more time with YOU (and only you).</p>
             </div>
         </section>
 
@@ -819,7 +814,7 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                 <div class="row">
                     <div class="col-md-6 mb-5 mb-md-0">
                         <div class="section-testimonials__item section-testimonials__item--left">
-                            <p><img src="https://www.howtogettheguy.com/site/wp-content/uploads/2022/10/bonus-tag.png"></p>
+                            <p><img src="https://www.howtogettheguy.com/site/wp-content/uploads/2022/10/httm-bonus.png"></p>
                             <strong>Real-Life Texts From Guys and Your Perfect Response, Every Time</strong>
                             <blockquote class="section-testimonials__quote">
                             </blockquote>
@@ -827,7 +822,7 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                     </div>
                     <div class="col-md-6">
                         <div class="section-testimonials__item section-testimonials__item--right">
-                            <p><img src="https://www.howtogettheguy.com/site/wp-content/uploads/2022/10/bonus-tag.png"></p>
+                            <p><img src="https://www.howtogettheguy.com/site/wp-content/uploads/2022/10/httm-bonus.png"></p>
                             <strong>7 Magic Messages That Get Any Guy to Respond to Your Charms</strong>
                             <blockquote class="section-testimonials__quote">
                             </blockquote>
@@ -1057,3 +1052,4 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
 </script>
 </body>
 </html>
+
