@@ -787,3 +787,43 @@ h1.inline-list-limited{
 span.color{
   color:#f54b5d;
 }
+
+
+/* MOBILE */
+
+section#testimonials-backup-bonus img{
+  width: 100%;
+}
+
+section#testimonials-backup-bonus .section-testimonials__item--left{
+  padding: 5px;
+  border: 3px dashed #04273c;
+}
+
+section#testimonials-backup-bonus .section-testimonials__item--right{
+  padding: 5px;
+  border: 3px dashed #04273c;
+}
+
+h1.bonus-highlight{
+  font-size:1.2rem;
+}
+
+p.bonus-sub{
+  font-size:1.05rem;
+  margin-top: 8%;
+}
+
+section#testimonials-backup img{
+  width: 80%;
+}
+
+section#testimonials-backup img{
+  width: 80%;
+}
+
+h1.inline-list-limited{
+  font-size: 20px;
+  line-height:1;
+  font-weight: 600;
+}
