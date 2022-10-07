@@ -219,7 +219,7 @@ html {
 }
 
 .hero__bonus {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   line-height: 1.625;
   color: #04273c;
   font-weight: bolder;
@@ -343,7 +343,7 @@ text-align: left;
 
 ul.form-list span{
   font-weight:800;
-  font-size:1.21rem;
+  font-size:1.2rem;
 }
 
 ul.form-list{
@@ -500,6 +500,21 @@ section#testimonials-backup{
   margin-top: -9% !important;
 }
 
+section#testimonials-backup img{
+  width: 40%;
+  margin-left: -1%;
+}
+
+section#testimonials-backup .section-testimonials__item--left{
+  background-color: #fff;
+  border: 5px dashed #04273c;
+}
+
+section#testimonials-backup .section-testimonials__item--right{
+  background-color: #fff;
+  border: 5px dashed #ff3247;
+}
+
 section#testimonials-backup2{
   margin-top: -5% !important;
   background-color: #58bcc4;
@@ -507,11 +522,39 @@ section#testimonials-backup2{
 
 section#testimonials-backup2 .section-testimonials__item--left{
   padding-bottom: 0;
+  background-color: #fff;
+  border: 5px dashed #04273c;
+  color:#04273c;
+  padding-top: 60px;
 }
 
 section#testimonials-backup2 .section-testimonials__item--right{
   padding-bottom: 0;
+  background-color: #fff;
+  border: 5px dashed #ff3247;
+  color:#04273c;
+  padding-top: 60px;
 }
+
+section#testimonials-backup2 img{
+  width: 40%;
+  margin-left: -1%;
+}
+
+section#testimonials-backup2 .section-testimonials__item--right strong{
+  font-weight:500;
+  line-height: 1.1 !important;
+  margin-top: 3%;
+  font-size: 1.7rem;
+}
+
+section#testimonials-backup2 .section-testimonials__item--left strong{
+  font-weight:500;
+  line-height: 1.1 !important;
+  margin-top: 3%;
+  font-size: 1.7rem;
+}
+
 
 /* 2560 SCREENS */
 
@@ -613,6 +656,8 @@ span.highlight-underline{
 span.sale-font{
   font-weight:800;
   font: size 1.45rem;
+  text-decoration: underline;
+  text-decoration-color: #ff3247;
 }
 
 ul.bonus-align{
@@ -662,4 +707,83 @@ ul.bonus-align{
 
 .section-experience__body{
   background-image:url("https://www.howtogettheguy.com/site/wp-content/uploads/2022/10/experience-bg.jpg");
+}
+
+/* NEW BONUS SECTION */
+
+h1.bonus-highlight{
+  font-size:1.3rem;
+  font-weight:500;
+  line-height: 1.4;
+  margin-top: 10%;
+  color:#04273c;
+}
+
+h1.bonus-highlight-2{
+  font-size:1.8rem;
+  font-weight:500;
+  line-height: 1.2;
+  color:#04273c;
+  margin-top: 8%;
+  text-decoration: underline;
+  text-decoration-color: #ff3247;
+}
+
+p.bonus-sub{
+  font-size:1.15rem;
+  color:#04273c;
+  margin-top: 5%;
+  line-height: 1.4;
+}
+
+p.bonus-sub-2{
+  font-size:1.4rem;
+  color:#04273c;
+  margin-top: 7%;
+  line-height: 1.4;
+}
+
+li.bonus-end{
+  font-size:1.3rem;
+  color:#04273c;
+  margin-top: 5%;
+  line-height: 1.4;
+  font-weight: 500;
+  margin-top: 8%;
+}
+
+span.highlight-underline-bonus{
+  text-decoration: underline;
+  text-decoration-color: #ff3247;
+  font-weight: 500;
+}
+
+section#testimonials-backup-bonus .section-testimonials__item--left{
+  padding: 30px;
+  background-color: #fff;
+  border: 5px dashed #04273c;
+}
+
+section#testimonials-backup-bonus .section-testimonials__item--right{
+  padding: 30px;
+  background-color: #fff;
+  border: 5px dashed #ff3247;
+}
+
+section#testimonials-backup-bonus img{
+  width: 70%;
+}
+
+section#testimonials-backup-bonus {
+  margin-top: -8%;
+}
+
+h1.inline-list-limited{
+  font-size: 24px;
+  line-height:1.1;
+  font-weight: 600;
+}
+
+span.color{
+  color:#f54b5d;
 }
