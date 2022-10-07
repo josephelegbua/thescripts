@@ -305,7 +305,7 @@ html {
 
 .navigation{
   padding-top: 25px;
-  padding-bottom: 20px;
+  padding-bottom: 120px;
 }
 
 .countdown__heading{
@@ -315,6 +315,10 @@ html {
 
 .d-none{
   display: flex !important;
+}
+  
+.navigation .btn-primary{
+  margin-bottom: 150px !important;
 }
 
 }
