@@ -887,6 +887,7 @@ span.color{
     font-size:24px !important;
   }
 
+
 }
 
 
@@ -912,5 +913,8 @@ span.color{
     width: 90% !important;
 }
   
+}
 
+span.anv-line{
+  color: #ff3247
 }
