@@ -319,6 +319,24 @@ html {
 
 }
 
+@media(width:360px){
+
+  .navigation{
+    padding-top: 25px;
+    padding-bottom: 15rem !important;
+  }
+
+}
+
+@media(width:280px){
+
+  .navigation{
+    padding-top: 25px;
+    padding-bottom: 16.5rem !important;
+  }
+
+}
+
 /* HERO SECTION */
 /* styles for hero section */
 
@@ -964,4 +982,10 @@ span.color{
 
 span.anv-line{
   color: #ff3247
+}
+
+@media (max-width:767px){
+  .guide--sales .d-none{
+    display: none !important;
+  }
 }
