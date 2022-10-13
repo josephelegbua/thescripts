@@ -337,6 +337,25 @@ html {
 
 }
 
+@media(width:375px){
+
+    .navigation{
+      padding-top: 25px;
+      padding-bottom: 15.5rem !important;
+    }
+  
+  }
+  
+  @media(width:320px){
+  
+    .navigation{
+      padding-top: 25px;
+      padding-bottom: 17rem !important;
+    }
+  
+  }
+  
+
 /* HERO SECTION */
 /* styles for hero section */
 
