@@ -296,64 +296,32 @@ html {
 .hours,
 .minutes,
 .seconds {
-  font-size: 1.15rem;
+  font-size: 0.85rem;
 }
 
 .countdown__wrapper{
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 .navigation{
-  padding-top: 25px;
-  padding-bottom: 14rem !important;
+  padding-top: 1px;
+  padding-bottom: 5px;
+  padding-bottom: 0.5rem;
+  height: 150px;
 }
 
 .countdown__heading{
-  font-size:0.95rem;
+  font-size:0.75rem;
   line-height: 1.6;
 }
 
-.d-none{
-  display: flex !important;
 }
 
-}
-
-@media(width:360px){
-
+@media(max-width:375px){
   .navigation{
-    padding-top: 25px;
-    padding-bottom: 15rem !important;
+    height: 170px;
   }
-
 }
-
-@media(width:280px){
-
-  .navigation{
-    padding-top: 25px;
-    padding-bottom: 16.5rem !important;
-  }
-
-}
-
-@media(width:375px){
-
-    .navigation{
-      padding-top: 25px;
-      padding-bottom: 15.5rem !important;
-    }
-  
-  }
-  
-  @media(width:320px){
-  
-    .navigation{
-      padding-top: 25px;
-      padding-bottom: 17rem !important;
-    }
-  
-  }
   
 
 /* HERO SECTION */
@@ -382,6 +350,57 @@ html {
     width: 100% !important;
   }
 
+  .hero--sales{
+    margin-top: -10%;
+  }
+
+  .hero__title{
+    font-size: 1.7rem;
+    line-height: 1.4em;
+  }
+
+  .hero--sales .hero__subtitle{
+    font-size: 1.05rem;
+    line-height: 1.3em;
+    margin-top: 13%;
+  }
+
+  .hero--sales .hero__desc{
+    font-size: 1rem;
+    line-height: 1.3em;
+  }
+
+
+}
+
+@media(width:414px){
+  .hero--sales{
+    margin-top: -10%;
+  }
+}
+
+@media(width:390px){
+  .hero--sales{
+    margin-top: -11%;
+  }
+}
+
+@media(width:393px){
+  .hero--sales{
+    margin-top: -11%;
+  }
+}
+
+@media(width:412px){
+  .hero--sales{
+    margin-top: -11%;
+  }
+}
+
+@media(width:320px){
+  .hero--sales{
+    margin-top: -11%;
+  }
 }
 
 /* FEATURE SECTION */
