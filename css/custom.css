@@ -370,6 +370,11 @@ html {
     line-height: 1.3em;
   }
 
+  .hero--sales .btn--hero-sales{
+    position: absolute;
+    top: 70%;
+  }
+
 
 }
 
