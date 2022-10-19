@@ -1,3 +1,28 @@
+<?php
+require_once '../../site/wp-load.php';
+require_once '../../common/gtgmember/index.php';
+
+$timezone = "America/New_York";
+$current_date = new \DateTime("now", new DateTimeZone($timezone));
+$redirect_rl_evergreen = '2022-10-22 03:00:00';
+
+if ($current_date->format('Y-m-d H:i:s') > $redirect_rl_evergreen && !isset($_GET['soldout'])) {
+    header('Location: https://www.howtogettheguy.com/thescripts/vsl/');
+    exit();
+}
+
+$cart_link = 'https://members.howtogettheguy.com/checkout/?rid=pgGVHb';
+$token = filter_input(INPUT_GET, 'token');
+
+if ($token) {
+    $cart_link = add_query_arg(['token' => $token, 'confirmpurchase' => 1, 'recommended' => 1], $cart_link);
+}
+
+$contact_id = filter_input(INPUT_GET, 'id');
+
+if (isset($contact_id) && function_exists('get_contact_information')) {
+    $contact_information = get_contact_information($contact_id);
+} ?>
 <!DOCTYPE html>
 <html lang="us">
 <head>
@@ -86,7 +111,7 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                         <!-- <span class="navbar__tag">Love. Life.</span> -->
                     </div>
                     <div class="countdown">
-                        <p class="countdown__heading">10 - Bonus Package Expires Soon</p>
+                        <p class="countdown__heading">10-Bonus Package Expires Soon</p>
                         <div class="countdown__wrapper">
                             <div class="days__wrapper">
                                 <p class="days">20</p>
@@ -106,7 +131,7 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                             </div>
                         </div>
                     </div>
-                    <a href="https://members.howtogettheguy.com/checkout/?rid=pgGVHb" class="btn btn-primary is-small">Get My Download</a>
+                    <a href="<?php echo $cart_link; ?>" class="btn btn-primary is-small">Get My Download</a>
                 </div>
             </div>
         </nav>
@@ -145,23 +170,41 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
         <section class="feature">
             <div class="container">
                 <div class="hero__cta-wrapper">
-                                        <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/" method="POST" class="download form_check_hotmail">
-                                                <div class="download__field">
-                            <label class="sr-only" for="hero-email">Email</label>
-                            <input class="download__input" id="hero-email" name="contact_fields[email]"
+                    <?php if (!empty($token)) { ?>
+                        <div class="text-center">
+                            <a href="<?php echo $cart_link; ?>" class="btn btn-primary">Get My Download</a>
+                        </div>
+                    <?php } else { ?>
+                        <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/"
+                              method="POST" class="download form_check_hotmail">
+                            <?php if (!empty($contact_information)
+                            && isset($contact_information['email'])
+                            ) { ?>
+                                <input type="hidden" name="contact_fields[email]"
+                                       value="<?php echo $contact_information['email']; ?>">
+                            <?php } else { ?>
+                            <div class="download__field">
+                                <label class="sr-only" for="hero-email">Email</label>
+                                <input class="download__input" id="hero-email" name="contact_fields[email]"
                                        placeholder="Email address (optional)" type="email"/>
-                        </div>
-                                                <div class="download__submit">
-                            <button type="submit" class="btn btn-primary">Get My download</button>
-                        </div>
-                        <input type="hidden" name="utm_adgroup" value="" /><input type="hidden" name="utm_adid" value="" /><input type="hidden" name="utm_campaign" value="" /><input type="hidden" name="utm_content" value="" /><input type="hidden" name="utm_source" value="" /><input type="hidden" name="utm_medium" value="" /><input type="hidden" name="utm_term" value="" /><input type="hidden" name="gclid" value="" /><input type="hidden" name="referrer" value="" /><input type="hidden" name="exp_cookie" id="exp_cookie" value="" /><input type="hidden" id="_wpnonce" name="_wpnonce" value="e03bd659a2" />                    </form>
-                                        <p class="hero__bonus">Including, for a limited time, 10 amazing bonuses:</p>
-                                        <ul class="form-list">
-                                            <li class="list-item-1"><span class="why-under"><span class="anv-line">LIMITED TIME:</span> Real-Life Texts From Guys and Your Perfect Response, Every Time</span> <p>Webinar walking through 7 different text exchanges and analyzing the responses.</p></li>
-                                            <li class="list-item-2"><span class="why-under">7 Magic Messages That Get Any Guy to Respond to Your Charms</span> <p>The best kind of first texts to send when you meet a new guy to inflame curiosity and stoke desire.</p></li>
-                                            <li class="list-item-3"><span class="why-under-no">PLUS 8 more amazing bonuses . . .</span></li>
-                                        </ul>
-                    
+                            </div>
+                            <?php } ?>
+                            <div class="download__submit">
+                                <button type="submit" class="btn btn-primary">Get My download</button>
+                            </div>
+                            <?php echo get_form_hidden_fields(); ?>
+                        </form>
+                    <?php } ?>
+                    <p class="hero__bonus">Including, for a limited time, 10 amazing bonuses:</p>
+                    <ul class="form-list">
+                        <li class="list-item-1"><span class="why-under"><span class="anv-line">LIMITED TIME:</span> Real-Life Texts From Guys and Your Perfect Response, Every Time</span>
+                            <p>Webinar walking through 7 different text exchanges and analyzing the responses.</p></li>
+                        <li class="list-item-2"><span class="why-under"><span class="anv-line">LIMITED TIME:</span> 7 Magic Messages That Get Any Guy to Respond to Your Charms</span>
+                            <p>The best kind of first texts to send when you meet a new guy to inflame curiosity and
+                                stoke desire.</p></li>
+                        <li class="list-item-3"><span class="why-under-no">PLUS 8 more. . .</span></li>
+                    </ul>
+
                 </div>
                 <div class="feature__subtitle">How many times have you <strong>panicked before sending a text to a guy</strong> you like because you were afraid he’d reject you? How many
                     times
@@ -215,19 +258,33 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                         texting and beyond.</p>
                     <p>These perfectly-crafted examples go beyond theory to show you how to take quick, confident action in your love life and get incredible results with men.</p>
                 </div>
-                                    <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/"
+                <?php if (!empty($token)) { ?>
+                    <div class="text-center">
+                        <a href="<?php echo $cart_link; ?>" class="btn btn-primary">Get My Download</a>
+                    </div>
+                <?php } else { ?>
+                    <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/"
                           method="POST" class="download form_check_hotmail">
-                                                    <div class="download__field">
-                                <label class="sr-only" for="feature-email">Email</label>
-                                <input class="download__input" id="feature-email" name="contact_fields[email]"
-                                       placeholder="Email address (optional)" type="email"/>
-                            </div>
-                                                <div class="download__submit">
+                        <?php if (!empty($contact_information)
+                        && isset($contact_information['email'])
+                        ) { ?>
+                            <input type="hidden" name="contact_fields[email]"
+                                   value="<?php echo $contact_information['email']; ?>">
+                        <?php } else { ?>
+                        <div class="download__field">
+                            <label class="sr-only" for="feature-email">Email</label>
+                            <input class="download__input" id="feature-email" name="contact_fields[email]"
+                                   placeholder="Email address (optional)" type="email"/>
+                        </div>
+                        <?php } ?>
+                        <div class="download__submit">
                             <button type="submit" class="btn btn-info">Download your 59 Scripts Now</button>
                         </div>
                         <p class="hero__bonus2">And if you order NOW, you also receive our full bonus package,
                             including:</p>
-                        <input type="hidden" name="utm_adgroup" value="" /><input type="hidden" name="utm_adid" value="" /><input type="hidden" name="utm_campaign" value="" /><input type="hidden" name="utm_content" value="" /><input type="hidden" name="utm_source" value="" /><input type="hidden" name="utm_medium" value="" /><input type="hidden" name="utm_term" value="" /><input type="hidden" name="gclid" value="" /><input type="hidden" name="referrer" value="" /><input type="hidden" name="exp_cookie" id="exp_cookie" value="" /><input type="hidden" id="_wpnonce" name="_wpnonce" value="e03bd659a2" />                    </form>
+                        <?php echo get_form_hidden_fields(); ?>
+                    </form>
+                <?php } ?>
                                             </div>
         </section>
 
@@ -239,7 +296,7 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                             <p><img src="https://www.howtogettheguy.com/site/wp-content/uploads/2022/10/httm-bonus.png"></p>
                             <h1 class="bonus-highlight-2">Real-Life Texts From Guys and Your Perfect Response, Every Time</h1>
                             <blockquote class="section-testimonials__quote">
-                                <p class="bonus-sub-2">In this 80 - minute webinar, I walk through 7 different text exchanges.</p>
+                                <p class="bonus-sub-2">In this 80-minute webinar, I walk through 7 different text exchanges.</p>
                                 <p class="bonus-sub-2">I analyze the responses from both sides of the exchange and provide word-for-word replies that the women could have sent instead.</p>
                                 <p class="bonus-sub-2">If you want to know what a guy means when he texts something like this, then you’re in for a treat!</p>
                             </blockquote>
@@ -248,11 +305,11 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                     <div class="col-md-6">
                         <div class="section-testimonials__item section-testimonials__item--right">
                             <p><img src="https://www.howtogettheguy.com/site/wp-content/uploads/2022/10/httm-bonus.png"></p>
-                            <h1 class="bonus-highlight-2"><span class="anv-line">LIMITED TIME:</span> 7 Magic Messages That Get Any Guy to Respond to Your Charms</h1>
+                            <h1 class="bonus-highlight-2">7 Magic Messages That Get Any Guy to Respond to Your Charms</h1>
                             <blockquote class="section-testimonials__quote">
                                 <p class="bonus-sub-2">A clear breakdown of the best kind of first text to send when you meet a new guy to inflame curiosity, stoke desire, and have guys checking their phone every 5 minutes to see when you’re going to text them next.</p>
                                 <p class="bonus-sub-2">This isn’t about you doing all the work at the beginning of a relationship — just the opposite! Learn how to leverage your first texts to have <em>him pursuing you!</em></p>
-                                <p class="bonus-sub-2"><b>PLUS 8 more amazing bonuses . . .</b></p>
+                                <p></p>
                             </blockquote>
                         </div>
                     </div>
@@ -301,21 +358,35 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                         </div>
                     </div>
                 </div>
-                                    <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/"
+                <?php if (!empty($token)) { ?>
+                    <div class="text-center">
+                        <a href="<?php echo $cart_link; ?>" class="btn btn-primary">Get My Download</a>
+                    </div>
+                <?php } else { ?>
+                    <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/"
                           method="POST" class="download download--light download--invert form_check_hotmail">
-                                                    <div class="download__field">
-                                <label class="sr-only" for="step-email">Email</label>
-                                <input class="download__input" id="step-email" name="contact_fields[email]"
-                                       placeholder="Email address (optional)" type="email"/>
-                            </div>
-                                                <div class="download__submit">
+                        <?php if (!empty($contact_information)
+                        && isset($contact_information['email'])
+                        ) { ?>
+                            <input type="hidden" name="contact_fields[email]"
+                                   value="<?php echo $contact_information['email']; ?>">
+                        <?php } else { ?>
+                        <div class="download__field">
+                            <label class="sr-only" for="step-email">Email</label>
+                            <input class="download__input" id="step-email" name="contact_fields[email]"
+                                   placeholder="Email address (optional)" type="email"/>
+                        </div>
+                        <?php } ?>
+                        <div class="download__submit">
                             <button type="submit" class="btn btn-secondary btn--step">Get Instant Access To Your
                                 Scripts
                             </button>
                         </div>
                         <p class="hero__bonus3">And order before Friday October 21 at midnight PT to receive our 10
                             bonus package</p>
-                        <input type="hidden" name="utm_adgroup" value="" /><input type="hidden" name="utm_adid" value="" /><input type="hidden" name="utm_campaign" value="" /><input type="hidden" name="utm_content" value="" /><input type="hidden" name="utm_source" value="" /><input type="hidden" name="utm_medium" value="" /><input type="hidden" name="utm_term" value="" /><input type="hidden" name="gclid" value="" /><input type="hidden" name="referrer" value="" /><input type="hidden" name="exp_cookie" id="exp_cookie" value="" /><input type="hidden" id="_wpnonce" name="_wpnonce" value="e03bd659a2" />                    </form>
+                        <?php echo get_form_hidden_fields(); ?>
+                    </form>
+                <?php } ?>
                                             </div>
         </section>
 
@@ -768,21 +839,33 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                     When You Know How to Say What You Mean…<br>
                     and Get the Reaction You’re After…</strong>
                 <div class="partner__price">$ 47</div>
-                                    <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/"
+                <?php if (!empty($token)) { ?>
+                    <a href="<?php echo $cart_link; ?>" class="btn btn-primary">Get My download</a>
+                <?php } else { ?>
+                    <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/"
                           method="POST" class="download download--light form_check_hotmail">
-                                                    <div class="download__field">
-                                <label class="sr-only" for="cta-email">Email</label>
-                                <input class="download__input" id="cta-email" name="contact_fields[email]"
-                                       placeholder="Email address (optional)" type="email"/>
-                            </div>
-                                                <div class="download__submit">
+                        <?php if (!empty($contact_information)
+                        && isset($contact_information['email'])
+                        ) { ?>
+                            <input type="hidden" name="contact_fields[email]"
+                                   value="<?php echo $contact_information['email']; ?>">
+                        <?php } else { ?>
+                        <div class="download__field">
+                            <label class="sr-only" for="cta-email">Email</label>
+                            <input class="download__input" id="cta-email" name="contact_fields[email]"
+                                   placeholder="Email address (optional)" type="email"/>
+                        </div>
+                        <?php } ?>
+                        <div class="download__submit">
                             <button type="submit" class="btn btn-primary">Yes Matt! Teach Me How To Talk To Men!
                             </button>
                         </div>
                         <p class="hero__bonus3">And order before Friday October 21 at midnight PT to receive 2
                             limited-time bonuses:</p>
-                        <input type="hidden" name="utm_adgroup" value="" /><input type="hidden" name="utm_adid" value="" /><input type="hidden" name="utm_campaign" value="" /><input type="hidden" name="utm_content" value="" /><input type="hidden" name="utm_source" value="" /><input type="hidden" name="utm_medium" value="" /><input type="hidden" name="utm_term" value="" /><input type="hidden" name="gclid" value="" /><input type="hidden" name="referrer" value="" /><input type="hidden" name="exp_cookie" id="exp_cookie" value="" /><input type="hidden" id="_wpnonce" name="_wpnonce" value="e03bd659a2" />                    </form>
-                                            </div>
+                        <?php echo get_form_hidden_fields(); ?>
+                    </form>
+                <?php } ?>
+            </div>
         </section>
 
         <section class="section-testimonials" id="testimonials-backup2">
@@ -868,7 +951,7 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                             </dd>
                             <dt><span>9.</span> <h1 class="inline-list-limited"><span class="color">LIMITED TIME:</span> REAL-LIFE TEXTS FROM GUYS AND YOUR PERFECT RESPONSE, EVERY TIME</h1></dt>
                             <dd class="inline-bonus-list">
-                                <p>In this 80 - minute webinar, Matt and Jameson walk through 7 different text exchanges.
+                                <p>In this 80-minute webinar, Matt and Jameson walk through 7 different text exchanges.
                                     <strong> analyze the responses from both sides of the exchange, and provide word-for-word replies that the women could have been sent instead.</strong>
                                     </p>
                                 <p>If you want to know what a guy means when he texts something like this, then you’re in for a treat!</p>
@@ -949,23 +1032,38 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
                         to do is select “YES! I want Free Access” on your secure order form. I hope to see you on our next live coaching webinar!
                     </dd>
                 </dl>
-                                    <div id="cta" class="cta__wrapper">
-                                                                                    <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/"
-                                                  method="POST" class="download form_check_hotmail">
-                                                                                                    <div class="download__field">
-                                                        <label class="sr-only" for="content-email">Email</label>
-                                                        <input class="download__input" id="content-email"
-                                                               name="contact_fields[email]"
-                                                               placeholder="Email address (optional)" type="email"/>
-                                                    </div>
-                                                                                                <div class="download__submit">
-                                                    <button type="submit" class="btn btn-primary">Get my download
-                                                    </button>
-                                                </div>
-                                            </form>
-                                                                <p class="cta__copy"><strong>ACT NOW - </strong> <em>How to Talk to Men</em> + Your Limited-Time Bonuses <strong>Expire</strong> Oct 21st at Midnight PT!</p>
-                        <p>Click the button above to get instant access.</p>
-                    </div>
+                <div id="cta" class="cta__wrapper">
+                    <?php if (!empty($token)) { ?>
+                        <div class="text-center">
+                            <a href="<?php echo $cart_link; ?>" class="btn btn-primary">Get My Download</a>
+                        </div>
+                    <?php } else { ?>
+                        <form action="https://members.howtogettheguy.com/subscribe/07df38fcc78a1c1c71cf0918dc1f2be9/"
+                              method="POST" class="download form_check_hotmail">
+                            <?php if (!empty($contact_information)
+                                && isset($contact_information['email'])
+                            ) { ?>
+                                <input type="hidden" name="contact_fields[email]"
+                                       value="<?php echo $contact_information['email']; ?>">
+                            <?php } else { ?>
+                                <div class="download__field">
+                                    <label class="sr-only" for="content-email">Email</label>
+                                    <input class="download__input" id="content-email"
+                                           name="contact_fields[email]"
+                                           placeholder="Email address (optional)" type="email"/>
+                                </div>
+                            <?php } ?>
+                            <div class="download__submit">
+                                <button type="submit" class="btn btn-primary">Get my download
+                                </button>
+                            </div>
+                            <?php echo get_form_hidden_fields(); ?>
+                        </form>
+                    <?php } ?>
+                    <p class="cta__copy"><strong>ACT NOW - </strong> <em>How to Talk to Men</em> + Your Limited-Time
+                        Bonuses <strong>Expire</strong> Oct 21st at Midnight PT!</p>
+                    <p>Click the button above to get instant access.</p>
+                </div>
                             </div>
         </section>
 
@@ -988,7 +1086,7 @@ if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initiali
 <script src="js/theme.js" async></script>
 <script>
     const countdown = document.querySelectorAll('.countdown');
-    const retreatDate = new Date("October 24, 2021 6:00:00 EDT").getTime();
+    const retreatDate = new Date("October 22, 2022 3:00:00 EDT").getTime();
 
     const timer = () => {
         const now = new Date().getTime();
